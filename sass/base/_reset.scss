@@ -1,0 +1,201 @@
+/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+
+/**
+ * Use border box on all elements
+ */
+ * { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+/**
+ * Zero out margin and padding on most elements as base style
+ */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure { 
+	margin: 0; 
+	padding: 0; 
+} 
+
+/**
+ * Display block as base for these elements
+ */
+header, footer, nav, section, article, hgroup, figure {
+	display: block;	
+}
+
+/**
+ * Display block as base for these elements
+ */
+
+li {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+/**
+ * Bootstrap
+ */
+
+@media (min-width: 768px) and (max-width: 992px){
+	.container{
+		width: 100%;
+		max-width: none;
+	}
+}
+
+@media (max-width: 768px){
+	.container{
+		width: 100%;
+		max-width: none;
+	}
+}
+
+/**
+ * Common
+ */
+
+.h2{
+	font-size: 44px;
+	line-height: 1.41;
+	text-align: center;
+	color: $text-1;
+	margin: 0;
+	font-family: $font-heavy;
+
+	span{
+		font-size: 44px;
+		line-height: 1.41;
+		color: $text-1;
+		font-family: $font-light;
+	}
+
+	@media (max-width: 767px){
+		font-size: 34px;
+	}
+}
+
+.section-container{
+	max-width: 1046px;
+	margin: 0 auto;
+}
+
+p{
+	font-weight: 500;
+}
+
+.section-img-banner{
+	overflow: hidden;
+	position: relative;
+	max-width: 1375px;
+	margin: 0 auto;
+	height: 500px;
+
+	img{
+		position: absolute;
+	}
+	@media (max-width: 767px){
+		height: 350px !important;
+	}
+}
+
+@media (max-width: 767px){
+	*{
+		hyphens:auto;
+		-webkit-hyphens:auto;
+		-webkit-hyphenate-character:"-";
+		-webkit-hyphenate-limit-after:1;
+		-webkit-hyphenate-limit-before:3;
+		-moz-hyphens:auto;
+	}
+}
+
+
+
+#overlay{
+    background: #fff none repeat scroll 0 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1031;
+    @include ease-10();
+    
+    &.hideOverlay{
+    	opacity: 0;
+    	visibility: hidden;
+    }
+
+    .preloader-wrapper {
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    text-align: center;
+	    top: 50%;
+	    transform: translateY(-50%);
+
+	    img{
+	    	height: 90px;
+	    	width: 90px;
+			-webkit-animation-name: a-opacity;
+			-webkit-animation-duration: 1.5s;
+			animation-name: a-opacity;
+			animation-duration: 1.5s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+	    }
+	}
+
+}
+
+
+// Animations
+
+@-webkit-keyframes w-scale {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+@keyframes w-scale {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+
+@-webkit-keyframes v-translate {
+    from {
+    	transform: translateY(40px);
+    	opacity: 0;
+    }
+    to {
+    	transform: translateY(0%);
+    	opacity: 1;
+    }
+}
+@keyframes v-translate {
+    from {
+    	transform: translateY(40px);
+    	opacity: 0;
+    }
+    to {
+    	transform: translateY(0%);
+    	opacity: 1;
+    }
+}
+
+@-webkit-keyframes a-opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes a-opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

@@ -1,0 +1,292 @@
+/*------------------------------------*\
+    #Google Sprint 
+\*------------------------------------*/
+
+
+.google-sprint-wrapper{
+	    margin: -95px 0 135px;
+    position: relative;
+    top: 95px;
+    padding: 90px 0;
+
+	.google-sprint-left{
+		.h2{
+			color: #fbb13c;
+			text-align: left;
+			line-height: 1.41;
+			font-weight: 700;
+			font-family: $font-bold;
+		}
+		.h2.desc{
+			color: #333132;
+			font-weight: 400;
+			font-family: $font-light;
+		}
+	}
+
+	.google-sprint-right{
+
+		$border: #D1D7E3;
+		$success: #69DD95;
+		$textColor: #797C86;
+		$placeholderColor: #C7C8CC;
+		$inputBorder: 0;
+		$inputShadow: 0 4px 12px -2px rgba(#6B75A1, .16);
+
+		.email-wrapper {
+		    position: relative;
+		    width: 100%;
+
+		    input {
+		        outline: none;
+		        width: 100%;
+		        &::-webkit-input-placeholder {
+		            color: $placeholderColor;
+		        }
+		        &:-moz-placeholder {
+		            color: $placeholderColor;
+		        }
+		        &::-moz-placeholder {
+		            color: $placeholderColor;
+		        }
+		        &:-ms-input-placeholder {
+		            color: $placeholderColor;
+		        }
+		    }
+		    svg {
+		        position: absolute;
+		        z-index: 1;
+		        right: 14px;
+		        top: 50%;
+		        width: 20px;
+		        height: 20px;
+		        fill: none;
+		        margin: -10px 0 0 0;
+		        polyline,
+		        path {
+		            stroke: #c9dde5;
+		            stroke-width: 1.4;
+		            stroke-linecap: round;
+		            stroke-linejoin: round;
+		            transition: stroke .3s ease 0s;
+		        }
+		        path {
+		            stroke-dasharray: 64;
+		            stroke-dashoffset: 127;
+		            transition: stroke-dasharray .8s ease .8s, stroke-dashoffset .8s ease .5s;
+		        }
+		        polyline {
+		            stroke-dasharray: 18;
+		            stroke-dashoffset: 18;
+		            transition: stroke-dashoffset .5s ease 0s;
+		        }
+		    }
+		    &.success {
+		        svg {
+		            polyline,
+		            path {
+		                stroke: #7ed321;
+		            }
+		            path {
+		                stroke-dasharray: 46;
+		                stroke-dashoffset: 150;
+		                transition: stroke-dasharray .6s ease 0s, stroke-dashoffset .8s ease .3s, stroke .3s ease .6s;
+		            }
+		            polyline {
+		                stroke-dashoffset: 0;
+		                transition: stroke-dashoffset .5s ease .6s, stroke .3s ease .6s;
+		            }
+		        }
+		    }
+		}
+
+
+		form{
+			max-width: 432px;
+		}
+
+		.form-label{
+			font-size: 14px;
+			margin-bottom: 9px;
+			color: #333132;
+			text-align: center;
+			display: block;
+			font-weight: 500;
+		}
+		.form-check-label{
+			display: block;
+			text-align: center;
+			cursor: pointer;
+			border: 1px solid #82968c;
+			padding: 10px;
+			margin-bottom: 18px;
+			position: relative;
+			overflow: hidden;
+			@include ease-2();
+			border-radius: 2px;
+
+			&:hover{
+				box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+			}
+
+			input{
+				position: absolute;
+				opacity: 0;
+				border-radius: 2px;
+			}
+
+			span{
+				color: #333132;
+				font-weight: 500;
+			}
+			span:after{
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				height: 110%;
+				width: 100%;
+				z-index: -1;
+				opacity: 0;
+				@include ease-5();
+				background: #82968c;
+				border-radius: 2px;
+			}
+			input:checked ~ span, input:checked ~ span:after{
+				opacity: 1;
+				color: #fff;
+			}
+		}
+		.email-wrapper{
+			position: relative;
+
+			input{
+				border-radius: 0;
+				border: 1px solid #82968c;
+				padding: 10px 50px 10px 30px;
+				height: auto;
+				border-radius: 2px;
+				color: #333132;
+
+				&:hover{
+					box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+				}
+				&.valid{
+					background: #fff;
+				}
+			}
+			input.error{
+				border-color: #ea5752;
+			}
+			label#email1-error {
+				position: absolute;
+				right: 0;
+				background: #fff;
+				top: 1px;
+				font-size: 0;
+				bottom: 1px;
+				right: 1px;
+				width: 28px;
+				line-height: 47px;
+				z-index: 1;
+				display: none !important;
+			}
+
+			label#email1-error:after {
+				content: "\f1fa";
+				font-family: fontawesome;
+				font-size: 22px;
+				color: #c9dde5;
+			}
+			label#email1-error.valid:after{
+				color: #7ed321;	
+			}
+
+			&.success{
+				i{
+					color: #7ed321;
+				}
+			}
+
+			i{
+				position: absolute;
+				font-size: 22px;
+				color: #c9dde5;
+				right: 10px;
+				top: 12px;
+				bottom: 0;
+				@include ease-5();
+			}
+		}
+		.google-sprint-submit{
+			margin: 27px auto 0;
+			background-color: #fbb13c;
+			color: #fff;
+			font-size: 14px;
+			font-weight: 700;
+			max-width: 231px;
+			width: 100%;
+			display: block;
+			border-radius: 2px;
+			padding: 17px 0 15px;
+			border: none;
+			text-transform: uppercase;
+			box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			font-family: $font-heavy;
+			@include ease-2();
+
+			&:hover{
+				box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.2);
+			}
+
+			&.success {
+				width: 100%;
+				z-index: 1;
+				background-color: #92cc4e;
+				background-repeat: no-repeat;
+				background-position: center;
+				border-radius: 2px;
+				font-size: 0;
+				height: 51px;
+				position: relative;
+				&:after, &:before{
+				    content: "";
+					position: absolute;
+					background: #fff;
+					height: 4px;
+				}
+				&:before{
+					width: 30px;
+					transform: rotate(-44deg);
+					left: 46%;
+					top: 22px;
+				}
+				&:after{
+					width: 17px;
+					transform: rotate(45deg);
+					left: 42%;
+					top: 26px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767px){
+
+		padding: 50px 0;
+
+		.google-sprint-left{
+			padding-bottom: 30px;
+		}
+		.google-sprint-right{
+
+			form{
+				margin: 0 auto;
+			}
+		}
+	}
+
+}

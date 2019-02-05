@@ -1,0 +1,127 @@
+.how-google-sprint{
+	padding-top: 57px;
+	.h2{
+		padding-bottom: 19px;
+	}
+
+	.section-img-banner{
+		height: 576px;
+	}
+
+	.how-google-sprint-head p{
+		color: #333132;
+		font-size: 25px;
+		line-height: 1.68;
+		text-align: center;
+	}
+
+	.how-gs-link{
+		text-align: center;
+		color: #1b9aaa;
+		display: block;
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 1.68;
+		margin: 67px auto 76px;
+		font-family: $font-bold;
+	}
+}
+
+.tag-contents{
+	text-align: center;
+	position: relative;
+	padding-top: 66px;
+
+	&:after {
+		content: "";
+		height: 90%;
+		background: #c9dde5;
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		display: block;
+		height: 240px;
+		bottom: 10%;
+		z-index: -1;
+	}
+
+	.tag-content {
+
+		button{
+			background-color: #1b9aaa;
+			font-size: 14px;
+			max-width: 231px;
+			padding: 15px;
+			margin-bottom: 32px;
+			color: #fff;
+			text-transform: uppercase;
+			width: 100%;
+			border: none;
+			border-radius: 2px;
+			font-family: $font-heavy;
+		}
+		.btn-remote{
+			background-color: #fbb13c;
+		}
+		h3{
+			background-color: #333132;
+			color: #fff;
+			font-size: 26px;
+			line-height: 1.62;
+			padding: 15px;
+			border-radius: 2px 2px 0 0;
+			font-family: $font-heavy;
+		}
+		p{
+		    font-size: 25px;
+		    color: #333132;
+		    background-color: #fff;
+		    display: table-cell;
+		    height: 250px;
+		    width: 100%;
+		    vertical-align: middle;
+		    border-radius: 0 0 2px 2px;
+		    padding: 15px 5px;
+		    word-break: break-word;
+		    font-family: $font-bold;
+		}
+		.tag-wrap {
+		    display: table;
+		    width: 100%;
+		}
+		.tags-in{
+			display: table;
+			width: 100%;
+
+			ul{
+				vertical-align: top;
+				display: table-cell;
+			}
+			li{
+				max-width: 247px;
+				display: inline-block;
+				vertical-align: top;
+				width: 100%;
+				margin: 0 10px 0px 10px;
+				box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+	@media (max-width: 767px){
+		&:after {
+			content: none;
+		}
+	}
+	@media (max-width: 992px){
+		.tag-content .tags-in li{
+			margin: 0 10px 30px 10px;
+		}
+	}
+	@media (max-width: 576px){
+		.tag-content .tags-in li{
+			margin: 0 0 30px 0;
+			max-width: none;
+		}
+	}
+}

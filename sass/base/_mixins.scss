@@ -1,0 +1,58 @@
+
+/**
+ * Transitions
+ */
+@mixin ease-10{
+	-webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+         -o-transition: all 1s ease;
+            transition: all 1s ease;
+}
+
+
+@mixin ease-6{
+	-webkit-transition: all 0.6s ease;
+       -moz-transition: all 0.6s ease;
+         -o-transition: all 0.6s ease;
+            transition: all 0.6s ease;
+}
+
+ 
+@mixin ease-5{
+	-webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+
+@mixin ease-2{
+	-webkit-transition: all 0.2s ease;
+       -moz-transition: all 0.2s ease;
+         -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+}
+
+/**
+ * Grain background 
+ */
+
+@mixin grain-bg() {
+	position: relative;
+
+	&:before, &:after{
+		content: "";
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		z-index: -1;
+	}
+	&:before{
+		background: $color-white;
+	}
+	&:after{
+		background-image: url(../images/bg-pattern.jpg);
+		background-repeat: repeat;
+	}
+}

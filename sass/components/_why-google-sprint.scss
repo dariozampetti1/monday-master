@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    #Hero Banner
+\*------------------------------------*/
+
+.why-google-sprint{
+	padding-top: 70px;
+	.h2{
+		padding-bottom: 76px;
+		font-weight: 900;
+		color: #484848
+	}
+	.why-GS-left{
+		border-top: 12px solid #f9cb53;
+	}
+	.why-GS-right{
+		border-top: 12px solid #cb8589;
+	}
+	.why-GS-content{
+		padding-bottom: 86px;
+
+		h4{
+			padding: 57px 50px 54px 50px;
+			font-size: 32px;
+  			font-weight: 700;
+  			line-height: 1.31;
+  			color: #333132;
+  			font-family: $font-bold;
+		}
+		.why-GS-contain{
+			padding: 55px 50px 50px 50px;
+			background-color: #f9f9f9;
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+			height: auto;
+		    min-height: 420px;
+		    border-radius: 2px;
+
+			h5, p{
+				font-size: 25px;
+				line-height: 1.68;
+				color: #333132;
+			}
+			h5{
+				font-weight: 700;
+				padding-bottom: 24px;
+	  			font-family: $font-bold;
+			}
+			p{
+				font-family: $font-light;
+			}
+		}
+	}
+
+	.section-img-banner {
+		height: 556px;
+	}
+
+	@media (max-width: 991px){
+		.why-GS-left{
+			margin-bottom: 70px;
+		}
+		
+		.why-GS-content{
+			h4, .why-GS-contain{
+				padding: 30px;
+				min-height: auto;
+			}
+		}
+	}
+}

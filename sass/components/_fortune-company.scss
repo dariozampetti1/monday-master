@@ -1,0 +1,51 @@
+.fortune-company-wrapper{
+	text-align: center;
+
+	.fortune-company-desc{
+		color: #333132;
+		max-width: 920px;
+		margin: 0 auto;
+		font-size: 20px;
+		padding-bottom: 75px;
+	}
+
+	.fortune-company-content{
+		
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			li{
+				width: 33.3%;
+				height: 90px;
+				line-height: 90px;
+				margin-bottom: 30px;
+			}
+		}	
+	}
+
+	@media(max-width: 767px){
+		.fortune-company-content{
+			
+			ul{
+				li{
+					width: 50%;
+				}
+			}
+		}
+	}
+	@media(max-width: 576px){
+		.fortune-company-content{
+			
+			ul{
+				li{
+					width: 100%;
+
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}	
+	}
+}

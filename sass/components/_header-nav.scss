@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    #Navbar
+\*------------------------------------*/
+
+
+.navbar{
+	background-color: #fff !important; 
+	@include ease-2();
+	padding: 15px;
+
+	&.fixed-navbar{
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	&.fade{
+		visibility: hidden;
+	}
+
+	.header-logo{
+		height: 54px;
+		width: 54px;
+	}
+	.nav-item{
+		padding: 0 15px;
+	}
+	@media (max-width: 767px){
+		.nav-item{
+			padding: 0;
+		}	
+	}
+	@media (min-width: 767px){
+		.navbar-nav {
+			margin-right: -15px;
+		}	
+	}
+}
+
+
+.navbar-light .navbar-nav .nav-link{
+	color: $text-1;
+
+	&:hover{
+		color: $text-1;
+	}
+}
+.navbar-light .navbar-nav .nav-item:last-child{
+	.nav-link{
+		color: #ea5752;
+	}
+}
+.navbar-expand-md .navbar-nav .nav-link{
+	padding: 10px;
+	position: relative;
+
+	&:after{
+		position: absolute;
+		content: "";
+		height: 1px;
+		width: 0%;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #979797;
+		opacity: 0;
+		transition: all 0.2s linear 0s;
+		margin: 0 auto;
+	}
+
+	&:hover:after{
+		opacity: 1;
+		width: 100%;
+	}
+
+	@media (max-width: 767px){
+		padding: 15px 0px;
+	}
+}

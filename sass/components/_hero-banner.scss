@@ -1,0 +1,204 @@
+/*------------------------------------*\
+    #Hero Banner
+\*------------------------------------*/
+
+
+.hero-banner-content{
+	padding: 60px 0 60px;
+	height: 572px;
+	position: relative;
+	margin-top: 80px;
+	margin: 90px auto 0;
+    max-width: 1375px;
+    position: relative;
+    @include ease-6();
+
+    &.bg-a:after{
+    	background-color: #C9DDE5;
+    }
+
+    &.bg-b:after{
+    	background-color: #F9CB53;
+    }
+
+    &.bg-c:after{
+    	background-color: #F4B266;
+    }
+
+    &.bg-d:after{
+    	background-color: #CB8589;
+    }
+    &.bg-e:after{
+    	background-color: #48B8D0;
+    }
+
+    &:after{
+    	position: absolute;
+    	left: 0;
+    	right: 0;
+    	top: 0;
+    	bottom: 0;
+    	height: 100%;
+    	width: 0%;
+    	content: "";
+    	z-index: 1;
+    	// background-color: #82968c;
+    }
+
+    &.init-animate{
+
+    	&:after{
+    		animation-delay: 1s;
+			-webkit-animation-name: w-scale;
+			-webkit-animation-duration: 1s;
+			animation-name: w-scale;
+			animation-duration: 1s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+    	}
+
+    	h1{
+    		animation-delay: 1.5s;
+			-webkit-animation-name: v-translate;
+			-webkit-animation-duration: 1.5s;
+			animation-name: v-translate;
+			animation-duration: 1.5s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+
+			span{
+				animation-delay: 1.6s;
+				-webkit-animation-name: a-opacity;
+				-webkit-animation-duration: 1.5s;
+				animation-name: a-opacity;
+				animation-duration: 1.5s;
+				animation-timing-function: ease;
+				animation-fill-mode: forwards;
+			}
+    	}
+    	p{
+    		animation-delay: 1.9s;
+			-webkit-animation-name: v-translate;
+			-webkit-animation-duration: 1s;
+			animation-name: v-translate;
+			animation-duration: 1.5s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+    	}
+    	.hero-down-arrow {
+    		animation-delay: 2s;
+			-webkit-animation-name: v-translate;
+			-webkit-animation-duration: 1.5s;
+			animation-name: v-translate;
+			animation-duration: 1.5s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+    	}
+
+    }
+
+    .container{
+    	position: relative;
+    	z-index: 2;
+    }
+
+	h1{
+		font-size: 80px;
+		font-weight: 700;
+		line-height: 1.63;
+		color: $color-white;
+		word-break: break-word;
+		max-width: 700px;
+		padding-bottom: 21px;
+		font-family: $font-bold;
+		opacity: 0;
+
+		span{
+			width: 100% !important;
+			opacity: 0;
+			overflow-x: visible !important;
+			overflow-y: hidden !important;
+		}
+		b{
+			font-size: 80px;
+			line-height: 1.63;
+			color: $color-white;
+			word-break: break-word;
+			font-family: $font-bold;
+		}
+	}
+	p{
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 1.76;
+		color: $color-white;
+		font-family: $font-bold;
+		opacity: 0;
+	}
+
+	.hero-down-arrow {
+	    font-size: 30px;
+	    color: #fff;
+	    position: absolute;
+	    bottom: 32px;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    text-align: center;
+	    height: 36px;
+	    width: 36px;
+	    line-height: 42px;
+	    border: 1px solid #fff;
+	    border-radius: 50%;
+	    z-index: 3;
+	    opacity: 0;
+
+	    i{
+	    	line-height: 42px;
+	    }
+
+	    &:after {
+		    content: "";
+		    position: absolute;
+		    left: 0;
+		    height: 13px;
+		    width: 3px;
+		    background: #fff;
+		    top: 10px;
+		    right: 0;
+		    margin: 0 auto;
+	    }
+	}
+
+
+	@media (max-width: 767px){
+		padding: 100px 0 100px;
+		height: auto;
+
+		h1{
+			font-size: 55px;
+			b{
+				font-size: 55px;	
+			}
+		}
+		p{
+			font-size: 20px;
+		}
+	}
+
+	@media (max-width: 767px){
+		h1{
+			font-size: 45px;
+			line-height: normal;
+			padding-bottom: 10px;
+			b{
+				font-size: 45px;
+				line-height: normal;
+			}
+		}
+	}
+}
+
+
+
+
